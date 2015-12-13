@@ -23,7 +23,11 @@ Dashboard::Dashboard()
 	main_lay->AddView(main);
 	
 	/* HTTP Stream */
-	urlForm=new BTextControl(NULL,"HTTP stream","http://necta-relay.mnus.de:8080/necta192.mp3",NULL);
+	urlForm=new BTextControl(NULL,"HTTP stream","http://localhost/TEST.mp3",NULL);
+	/* Radio 3 stream */
+	/* http://necta-relay.mnus.de:8080/necta192.mp3 */
+	/* http://radio3.rtveradio.cires21.com/radio3/mp3/icecast.audio */
+	/* more at dir.xiph.org */
 	control->AddView(urlForm);
 	BButton* urlSubmit=new BButton(NULL,"Play HTTP stream",
 		new BMessage(PLAY_HTTP));
